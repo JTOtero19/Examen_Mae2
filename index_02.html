@@ -1,0 +1,463 @@
+<!--Frist section-->
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+   * {box-sizing: border-box}
+   body {font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+  
+   /* Style the tab */
+   .tab {
+     float: left;
+     border: 1px solid #ccc;
+     background-color: #594F46;
+     width: 30%;
+     height: 700px;
+     color: white;
+   } 
+  
+   /* Style the buttons inside the tab */
+   .tab button {
+     display: block;
+     background-color: inherit;
+     color: white;
+     padding: 19px 16px;
+     width: 100%;
+     border: none;
+     outline: none;
+     text-align: left;
+     cursor: pointer;
+     font-size: 17px;
+   }
+  
+   /* Change background color of buttons on hover */
+   .tab button:hover {
+     background-color: #59412C;
+     color: white;
+   }
+  
+   /* Create an active/current "tab button" class */
+   .tab button.active {
+     background-color: #59412C;
+     color: white;
+   }
+   
+   /* Style the tab content , el height es el tamaño del recuadro que esta disponible para escribir.*/
+   .tabcontent {
+     float: left;
+     padding: 0px 12px;
+     border: 1px solid #CEC2AE;
+     width: 70%;
+     border-left: none;
+     height: 1000px;
+     display: none;
+   }
+  
+   /* Clear floats after the tab */
+   .clearfix::after {
+     content: "";
+     clear: both;
+     display: table;
+   }
+  
+   .tablinks {
+    color:white;
+   }
+
+   /* img class */
+  .pictab {
+    height:200px; 
+    margin:0px; 
+    float: left; 
+    border-radius: 10%; 
+    border: 5px solid #000000;
+  }
+
+  /* text In Tab */
+  .parr {
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 2.0;
+    font-size:20px; 
+    color:black;
+    text-align: justify;
+    text-justify: inter-word;
+    float: left;
+  }
+
+  /* text In Tab */
+  .parrv2 {
+    font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 2.0;
+    font-size:20px; 
+    color:white;
+    text-align: justify;
+    text-justify: inter-word;
+    float: left;
+    padding: 3px 10px;
+  }
+
+   /* text In Tab */
+   .parrv3 {
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 2.0;
+    font-size:25px; 
+    color:white;
+    float: left;
+    text-align: left;
+    padding: 3px 10px;
+  }
+
+  /*footer*/
+  .col_white_amrc { color:#FFF; font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+  footer { width:100%; background-color:#59412C; min-height:250px; padding:10px 0px 25px 0px ;}
+
+  .pt2 { padding-top:40px ; margin-bottom:20px ; font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+  footer p { font-size:20px; color:#CCC; padding-bottom:0px; margin-bottom:8px; font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+
+  .mb10 { padding-bottom:15px ; color: white}
+
+  .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:20px; padding:0px 0px 10px 0px ; font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
+
+  .footer_ul_amrc li {padding:0px 0px 5px 0px;}
+
+  .footer_ul_amrc li a{ color:#CCC;}
+
+  .footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+
+  .fleft { float:left;}
+
+  .padding-right { padding-right:10px; }
+
+  .footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px; color: white}
+
+  .footer_ul2_amrc li p { display:table; }
+
+  .footer_ul2_amrc li a:hover { text-decoration:none;}
+
+  .footer_ul2_amrc li i { margin-top:5px;}
+
+  .bottom_border { border-bottom:1px solid #CEC2AE; padding-bottom:20px;}
+
+  .foote_bottom_ul_amrc {
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	  list-style-type:none;
+	  padding:0px;
+	  display:table;
+	  margin-top: 10px;
+	  margin-right: auto;
+	  margin-bottom: 10px;
+	  margin-left: auto;
+  }
+  .foote_bottom_ul_amrc li { display:inline;}
+
+  .foote_bottom_ul_amrc li a { color: white; margin:0 12px;}
+
+  .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+
+  .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+
+  .social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+
+  .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+ 
+   /* Style text */
+  p { 
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 2.0;
+    font-size:20px; 
+    color:black;
+    text-align: justify;
+    text-justify: inter-word; 
+    }  
+     
+   /* Title h1 text */
+  h1 { 
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:45px; 
+    color:black; 
+    margin: 10px; 
+    }
+
+   /* Title h2 text */
+  h2 {
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    font-size:30px; 
+    color:black; 
+    margin: 10px; 
+    }
+   
+   /* Title h3 Text */
+  h3 {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  font-size:20px; 
+  color:black; 
+  margin: 10px;
+   } 
+
+   /* Tilte h4 Text */
+  h4 {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  color: black; 
+  font-size: 40px;
+   }
+
+   /* title h5 Text */
+  h5 {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  line-height: 2.0; 
+  font-size:30px; 
+  color:white
+   }
+
+   /* em text */
+  em {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  font-size:20px; 
+  color:black; 
+  margin: 10px; 
+  }
+
+   /* button style */
+   button {
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:20px; 
+    color:white;
+   }
+ 
+    </style> 
+  </head>
+
+ <body>
+   <title> El Mall En Santiago: Un habitat urbano. </title>
+   <link rel="shortcut icon" type="image/jpg" href="https://cdn-icons-png.flaticon.com/512/3649/3649571.png">
+
+   <div style="background-image: url('https://st2.depositphotos.com/31006582/45989/v/1600/depositphotos_459892738-stock-illustration-detailed-map-santiago-city-administrative.jpg');
+   height: 100vh; 
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   background-attachment: fixed;
+   padding-top: 80px;
+   text-align: center;">
+
+   <img src="https://media.fashionnetwork.com/m/2eb4/e8ec/b622/a691/a647/9ed0/4473/323c/6301/cff7/cff7.jpg" 
+        style="height:350px; border-radius: 10%; border: 5px solid #000000;" alt="This is a image of Mall plaza Oeste">
+
+    <h1> <br> El Mall En Santiago</h1> 
+    <h2> Un habitat urbano.</h2>
+      
+   </div>
+
+   <div style="background-color: #CEC2AE; height:3200px; padding-top:80px;"> 
+  
+   <img src="C:\Users\otero\OneDrive\Imágenes\unnamed.jpg" 
+        style="height:515px; margin:100px; float: left; border-radius: 10%; border: 5px solid #000000;" 
+        alt="Mapa de areas comerciales en el gran santiago.">
+     
+   <div style="height:600px; margin:100px;">
+   <h4> Introducción </h4>
+    <p>Nuestra investigación para este proyecto se basa en la cantidad de centros comerciales que hay en Chile, específicamente en el Gran Santiago y cual es el impacto que estos tienen en la vida de los chilenos y en el territorio en cuál están.
+    <br> Escogimos este tema ya que en el curso “Dinámicas de proyectos contemporáneos” estamos trabajando con este, el cuál nos parece muy interesante por las consecuencias que este trae para todos los Chilenos. 
+    <br> Como mencionamos en la presentación pasada, a diferencia de USA que es donde nació la ecología de los centros comerciales, en Chile cada día se abren nuevos malls, lo que nos pone en el país con más metros cuadrados de centros comerciales en sudamerica y uno de los primeros a nivel mundial, con más de 1.800.000 m^2 y alrededor de 32 establecimientos.
+    <br> Estos espacios comerciales están rodeados por placas de concreto las cuales en su interior forman una simulación de la realidad “perfecta”, ya que dentro de estos lugares la temperatura es perfecta, con una iluminación fuerte y clara, olores y sonidos agradables y con una gama de colores que cuenta con plantas, madera, concreto, luces cálidas, etc. 
+    <br> Todo lo anterior crea una falsa sensación agradable e irrealista que hace que el cliente se quiera quedar dentro del centro comercial. También estos espacios se utilizan para socializar, para reuniones de trabajo, juntarse con amigos, familia, realizar actividades varias, almorzar, etc.
+      
+   </p>
+  
+    <h2 style="font-family: apple-system,BlinkMacSystemFont,"Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-size:20px; color:black; margin:10px;> Lista de Centros Comerciales</h2>
+    <p> Selecciona uno para ver su ubicación e información:</p><br>
+   
+    <div class="tab">
+      <button class="tablinks" onmouseover="openCity(event, 'London')">Open Kennedy</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Paris')">Mall Plaza Los Dominicos</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Santiago')">Parque Arauco</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Conce')">Mall Plaza Egaña</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Algarrobo')">Portal La Dehesa</button>
+      <button class="tablinks" onmouseover="openCity(event, 'ConCon')">Mall Plaza Oeste</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Rapel')">Costanera Center</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Puertecillo')">Mall Plaza Vespucio</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Puerto Varas')">Casa Costanera</button>
+      <button class="tablinks" onmouseover="openCity(event, 'San pedro')">Alto Las Condes</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Matanzas')">Mall Sport</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Buenos Aires')">Portal La Reina</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Mendoza')">Mall Plaza Tobalaba</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Cordoba')">Mall Plaza Sur</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Mardel')">Mall Plaza Norte</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Pinamar')">Mall Plaza Alameda</button>
+      
+    </div>
+        
+    <div id="London" class="tabcontent">
+      <h3>Open Kennedy</h3>
+      <img class="pictab" src="https://preopencl.mzzo.com/sites/default/files/Chile/Kennedy/Imagenes/pick_mapa01.png" 
+           alt="Ubicación OK.">
+      <p class="parr"> Este es el último centro comercial que habrió en Chile, tiene una gran influencia y congestión de personas que lo visitan, esto se debe princiaplmente a que la tienda sueca IKEA llego al país a este centro comercial. </p>
+    </div>
+         
+    <div id="Paris" class="tabcontent">
+      <h3> Mall Plza Los Dominicos</h3>
+      <img class="pictab" src="https://cdn.plataformaurbana.cl/wp-content/uploads/2010/06/1277476687_dibujo.jpg"  
+            alt="Ubicación MPD."> 
+      <p class="parr"> Este centro comercial se distingue por disponer de estacionamientos subterraneos gratiutos, una gran variedad de tienas retails y menudeo, cuenta con mas de 20 restaurants y es animal friendly.</p>
+    </div>
+        
+    <div id="Santiago" class="tabcontent">
+      <h3> Parque Arauco</h3>
+      <img class="pictab" src="https://www.happycow.net/staticmap?zoom=16&lat=-33.402193&lng=-70.578249&type=3&width=600&height=360&t=10"  
+            alt="Ubicación PA."> 
+      <p class="parr"> Es uno de los primeros grandes Malls que tuvo nuestro país, cuenta con una gran zona al aire libre, musica en vivo, áreas verdes y se distingue ya que esta en frente del Parque Araucano y Juan Pablo II.</p>
+    </div>
+        
+    <div id="Conce" class="tabcontent">
+      <h3>Mall Plaza Egaña</h3>
+      <img class="pictab" src="https://www.vitamina.cl/wp-content/uploads/2017/02/PEGmapaweb.jpg"  
+           alt="Ubicación MPE.">
+      <p class="parr"> Mall Plaza Egaña es el primer mall sustentable de Chile y cuenta con certificación Leed Gold, la cual avala internacionalmente la propuesta constructiva respetuosa con el medio ambiente y el entorno. Dentro de sus principales características destaca la fachada de 6.400 mts2 de muros verdes, el uso de materiales nobles en la construcción, la existencia de 900 estacionamientos para bicicletas, la reutilización de agua en su operación y la promoción de la eficiencia energética a través de sus sistemas de climatización e iluminación. </p>
+    </div>
+
+    <div id="Algarrobo" class="tabcontent">
+      <h3>Portal La Dehesa</h3>
+      <img class="pictab" src="https://www.google.com/maps/d/thumbnail?mid=16FtNIowldEJCGB0ypm343KFKfR8"  
+           alt="Ubicación PD.">
+      <p class="parr"> Portal La Dehesa fue inaugurado en 2003. Posee una extensión total de aproximadamente de 11,7 ha.1​ Está ubicado en la intersección de Avenida La Dehesa con Comandante Malbec, y se caracteriza principalmente debido a su estructura de aspecto colonial, combinada con una gran variedad de terrenos con vegetación, cosa que es común dentro de la comuna en la que se ubica este centro comercial.</p>
+    </div>
+
+    <div id="ConCon" class="tabcontent">
+      <h3>Mall Plaza Oeste</h3>
+      <img class="pictab" src="https://mistorechile.cl/wp-content/uploads/2021/07/direccionplazaoeste.jpg"  
+           alt="Ubicación MPO.">
+      <p class="parr"> Actualmente, el equipamiento del Mallplaza Oeste consiste en alrededor de 200 tiendas menores en tres niveles; tres tiendas departamentales de las cadenas Falabella, París y Ripley, 17 salas de cine de la cadena Cinemark, un hipermercado Tottus, una tienda de mejoramiento del hogar Sodimac Homecenter y Sodimac Constructor, un patio de comidas, una sede del Instituto Profesional DuocUC, una zona de juegos infantiles Happyland, un centro automotor AutoPlaza, un centro médico Integramédica y 5000 estacionamientos cubiertos y descubiertos. Además cuenta con un sector Las Terrazas y servicios menores como instituciones bancarias, servicios públicos, empresas de servicios. </p>
+    </div>
+            
+    <div id="Rapel" class="tabcontent">
+      <h3>Costanera Center</h3>
+      <img class="pictab" src="https://www.google.com/maps/d/thumbnail?mid=1WEzqm2SaY9KQ-ZOqAeNQyiMTH04&hl=es"  
+           alt="Ubicación CC.">
+      <p class="parr"> Costanera Center es el centro comercial más grande de Chile, ubicado en la comuna de Providencia, Región Metropolitana de Santiago. Fue nombrado así porque está en la Avenida Costanera Sur, cerca del río Mapocho. Consta de un conjunto de cuatro edificios ubicados en la intersección de Avenida Andrés Bello con Nueva Tajamar, a unos metros de la estación Tobalaba del Metro de Santiago. Su edificio central, la Gran Torre Santiago, cuenta con un área total de 128 000 m², tiene una altura de 297 metros incluida la espiral (300 m hasta el último de sus 62 pisos) y está equipado con 24 ascensores de alta velocidad que pueden alcanzar un máximo de 6,6 metros por segundo. </p>
+    </div>
+            
+    <div id="Puertecillo" class="tabcontent">
+      <h3>Mall Plaza Vespucio</h3>
+      <img class="pictab" src="https://ecocarga.com/img/fachadas/mapa-mallplaza-florida.jpg"  
+           alt="bicación MPV">
+      <p class="parr"> Se compone por tiendas departamentales de las cadenas Falabella, Ripley, París, Fashion's Park, Tricot, un hipermercado Líder y una tienda de deporte Decathlon, el segundo patio de comidas más grande de Santiago de Chile compuesta por 16 tiendas de comida, un sector de ventas de automóviles AutoPlaza, sala de conciertos SCD y teatro, un centro médico Clínica Vespucio, Biblioteca Viva, un sector Aires, un sector Las Terrazas, y un Instituto Profesional Duoc UC. Además cuenta con un boulevard de bancos, encomiendas y servicios. Para el entretenimiento, se encuentra la cadena de cines Cinemark, centro de entretención y bowling Happyland, una pista de patinaje en hielo Cerogrado y un museo con exposiciones de colección patrimonial.</p>
+    </div>
+            
+    <div id="Puerto Varas" class="tabcontent">
+      <h3>Casa Costanera</h3>
+      <img class="pictab" src="https://appassets.mvtdev.com/map/188/s/642/20358471.jpg"  
+           alt="Ubicación CC">
+      <p class="parr"> Disfruta exclusivas tiendas de moda, decoración y entretención además de una oferta gourmet única en un espacio rodeado de áreas verdes y lounges para relajarse. Ubicado en pleno corazón de Vitacura, Casacostanera es un mall semi abierto que promete los mejores servicios y un momento de compra increíble.      </p>
+   </div>
+            
+    <div id="San pedro" class="tabcontent">
+      <h3>Alto Las Condes</h3>
+      <img class="pictab" src="https://www.google.com/maps/d/thumbnail?mid=17cIRQQztKyex815QSBubfH2xJRw&hl=en_US"  
+           alt="Ubicación AC">
+      <p class="parr"> Debido a su excelente ubicación, donde se conectan las comunas de Vitacura con Las Condes, se estima que recibe 20 millones de visitas al año. Tiene 231.000 metros cuadrados construidos, y cuenta con 5000 estacionamientos. Posee más de 200 locales comerciales, patio de comidas, salas de cine, tiendas por departamento, centros de entretenimiento familiar y un centro médico. También se encuentra la sede del holding propietario del centro comercial Cencosud. Se espera que para 2027 sea inaugurada una estación de la futura Línea 7 del Metro de Santiago en la intersección de Avenida Presidente Kennedy con Avenida Padre Hurtado, a algunos metros del centro comercial. </p>
+    </div>
+            
+    <div id="Matanzas" class="tabcontent">
+      <h3>Mall Sport</h3>
+      <img class="pictab" src="https://www.mallsport.cl/cl/wp-content/themes/mallTest/img/imgMapa.jpg"  
+           alt="Ubicación MS.">
+      <p class="parr"> Es un centro comercial especializado en deportes de riesgo, con una pequeña laguna y algunos restaurantes, posee tiendas de deporte, outdoor, camping, trekking, trail running, pesca, kayak, mountain bike, carpas, sacos de dormir, equipamiento montaña, etc. </p>
+    </div>
+            
+    <div id="Buenos Aires" class="tabcontent">
+      <h3>Portal La Reina</h3>
+      <img class="pictab" src="https://preopencl.mzzo.com/sites/default/files/Chile/Kennedy/Imagenes/pick_mapa01.png"  
+           alt="Mapa de areas comerciales en el gran santiago.">
+      <p class="parr"> Este es el último centro comercial que habrió en Chile, tiene una gran influencia y congestión de personas que lo visitan, esto se debe princiaplmente a que la tienda sueca IKEA llego al país a este centro comercial. </p>
+    </div>
+            
+    <div id="Mendoza" class="tabcontent">
+      <h3>Mall Plaza Tobalaba</h3>
+      <img class="pictab" src="https://appassets.mvtdev.com/map/188/st/642/2186547.jpg"  
+           alt="Ubicación MPT.">
+      <p class="parr"> Un gran centro comercial de la cadena MallPlaza, cuenta con caracteristicas similares a los otros de su categoría.</p>
+    </div>
+            
+    <div id="Cordoba" class="tabcontent">
+      <h3>Mall Plaza Sur</h3>
+      <img class="pictab" src="https://appassets.mvtdev.com/map/188/str/642/11484703.jpg"  
+      alt="Ubicaicón MPS.">
+      <p class="parr"> Este mall cuenta con tres multitiendas (La Polar, Falabella y Ripley), un Hipermercado (Líder), un patio de construcción formado por Homecenter Sodimac y Sodimac Constructor, AutoPlaza, Las Terrazas, Cinépolis, Happyland, un patio de comidas, un Boulevard de servicios bancarios y financieros.</p>
+    </div>
+   
+    <div id="Mardel" class="tabcontent">
+      <h3>Mall Plaza Norte</h3>
+      <img class="pictab" src="https://plazanorte.pe/wp-content/uploads/2020/03/Mapa-ubicaci%C3%B3n-CCPN-i.jpg"  
+           alt="Ubicación MPN.">
+      <p class="parr"> Un gran centro comercial ubicado en la comuna de Huechuraba, dispone de un edificio de oficinas, cajeros, restaurantes, el primer karting eléctrico de Chile y mucho más. </p>
+    </div>
+            
+    <div id="Pinamar" class="tabcontent">
+      <h3>Mall Plaza Alameda</h3>
+      <img class="pictab" src="https://appassets.mvtdev.com/map/188/s/642/42608748.jpg"  
+           alt="Ubicación MPA.">
+      <p class="parr"> Mall Plaza Alameda es un centro urbano donde se ofrecen una gran cantidad de productos, servicios y experiencias que están al beneficio de sus visitantes y que lo transforman en un emplazamiento ideal para un entorno de trabajo.</p>
+   </div>
+            
+   <div class="clearfix"></div>
+   
+   <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+   </script>  
+  </body>
+
+  <div style="background-color: #CEC2AE; height:50px; padding-top:80px;"> </div>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
+
+  <footer class="footer">
+   <div class="container bottom_border">
+   <div class="row">
+   <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+   <h5 class="headin5_amrc col_white_amrc pt2">Investigación</h5>
+
+   <p class="mb10">La investigación  de estos datos se baso en la búsqueda, lectura y visita a estos lugares, nos concentramos en la lectura de informes echos por arquitectos estudiantes y profesionales los cuales lo complementamos con nuestras visitas y experencia vivida. <br> La información completa de esta página se complementa con la lectura de un breve ensayo que realizamos sobre este tópico.</p>
+   <p><i class="fa fa-location-arrow"></i> Universidad Adolfo Ibañez </p>
+   <p><i class="fa fa-phone"></i>  +56 9 6612 4508  </p>
+   <p><i class="fa fa fa-envelope"></i> josotero@alumnos.uai.cl  </p>
+   </div>
+
+   <div class=" col-sm-4 col-md  col-12 col">
+   <h5 class="headin5_amrc col_white_amrc pt2">Nuestras redes sociales</h5>
+
+
+   <ul class="footer_ul2_amrc">
+   <a href="#"><i class="fab fa-instagram fleft padding-right"></i> </a><p>Sigue a <a style="color:beige;" href=https://www.instagram.com/camila_tala/ > Camila Tala</a></p>
+   <a href="#"><i class="fab fa-instagram fleft padding-right"></i> </a><p>Sigue a <a style="color:beige;" href=https://www.instagram.com/joacokonig/ > Joaquín König</a></p>
+   <a href="#"><i class="fab fa-instagram fleft padding-right"></i> </a><p>Sigue a <a style="color:beige;" href=https://www.instagram.com/jtotero/ > José Tomás Otero</a></p>
+   <p class="parrv2"> Si quieres información más detallada lee nuestro informe  <a style="color:beige;" href="C:\Users\otero\Desktop\DOCUMENTOS_01\MAE_2022"> ¿Un hábitat simulado entre paredes? El mall en Santiago de Chile</a></p>
+   </ul>
+
+   </div>
+   </div>
+   </div>
+
+   <p class="text-center">Copyright @2022 | Diseñado por <a href="#">KÖTAOT</a></p>
+
+  </footer>
+</html>
