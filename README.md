@@ -1,2 +1,2 @@
 # Examen_Mae2
-Esta es una prueba, Hola Mundo 
+Esta es mi primera página web creada para un exmámen de un curso de la universidad.
